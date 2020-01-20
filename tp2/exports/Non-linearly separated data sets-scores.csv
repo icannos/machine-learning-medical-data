@@ -1,0 +1,6 @@
+metrics,kmean,spectral,hierarchical-ward,hierarchical-average,hierarchical-complete
+homogeneity_score,0.5,1.0,0.62,0.55,0.47
+completeness_score,0.32,0.67,0.39,0.35,0.32
+v_measure_score,0.39,0.8,0.48,0.43,0.38
+adjusted_rand_score,0.29,0.75,0.38,0.29,0.39
+silhouette_score,0.42,0.34,0.41,0.43,0.42
