@@ -1,0 +1,33 @@
+digraph Tree {
+node [shape=box, style="filled, rounded", color="black", fontname=helvetica] ;
+edge [fontname=helvetica] ;
+0 [label=<insuline taken &le; 0.5<br/>gini = 0.5<br/>samples = 200<br/>value = [100, 100]<br/>class = DR>, fillcolor="#ffffff"] ;
+1 [label=<age &le; 47.451<br/>gini = 0.426<br/>samples = 117<br/>value = [81, 36]<br/>class = DR>, fillcolor="#f1b991"] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label=<hba1c &le; 6.797<br/>gini = 0.245<br/>samples = 63<br/>value = [54, 9]<br/>class = DR>, fillcolor="#e9965a"] ;
+1 -> 2 ;
+3 [label=<gini = 0.0<br/>samples = 20<br/>value = [20, 0]<br/>class = DR>, fillcolor="#e58139"] ;
+2 -> 3 ;
+4 [label=<gini = 0.331<br/>samples = 43<br/>value = [34, 9]<br/>class = DR>, fillcolor="#eca26d"] ;
+2 -> 4 ;
+5 [label=<hba1c &le; 5.423<br/>gini = 0.5<br/>samples = 54<br/>value = [27, 27]<br/>class = DR>, fillcolor="#ffffff"] ;
+1 -> 5 ;
+6 [label=<gini = 0.0<br/>samples = 8<br/>value = [8, 0]<br/>class = DR>, fillcolor="#e58139"] ;
+5 -> 6 ;
+7 [label=<gini = 0.485<br/>samples = 46<br/>value = [19, 27]<br/>class = NDR>, fillcolor="#c4e2f7"] ;
+5 -> 7 ;
+8 [label=<age &le; 49.854<br/>gini = 0.353<br/>samples = 83<br/>value = [19, 64]<br/>class = NDR>, fillcolor="#74baed"] ;
+0 -> 8 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+9 [label=<hba1c &le; 8.105<br/>gini = 0.496<br/>samples = 33<br/>value = [15, 18]<br/>class = NDR>, fillcolor="#deeffb"] ;
+8 -> 9 ;
+10 [label=<gini = 0.444<br/>samples = 18<br/>value = [12, 6]<br/>class = DR>, fillcolor="#f2c09c"] ;
+9 -> 10 ;
+11 [label=<gini = 0.32<br/>samples = 15<br/>value = [3, 12]<br/>class = NDR>, fillcolor="#6ab6ec"] ;
+9 -> 11 ;
+12 [label=<age &le; 58.395<br/>gini = 0.147<br/>samples = 50<br/>value = [4, 46]<br/>class = NDR>, fillcolor="#4aa6e7"] ;
+8 -> 12 ;
+13 [label=<gini = 0.0<br/>samples = 30<br/>value = [0, 30]<br/>class = NDR>, fillcolor="#399de5"] ;
+12 -> 13 ;
+14 [label=<gini = 0.32<br/>samples = 20<br/>value = [4, 16]<br/>class = NDR>, fillcolor="#6ab6ec"] ;
+12 -> 14 ;
+}

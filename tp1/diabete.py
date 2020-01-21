@@ -38,6 +38,29 @@ graph = graphviz.Source(dot_data)
 graph.render("exports/classification_tree_diabete_remission")
 
 # ============================
+# (Small) Decision Tree
+# ============================
+
+# Create and fit classifier
+clf = tree.DecisionTreeClassifier(max_depth=3)
+clf = clf.fit(data_diabete, classes_diabete)
+
+# Visualise tree
+
+features_names = ['age', 'hba1c', 'insuline taken', 'other drugs taken']
+classes = ['DR', 'NDR']
+
+dot_data = tree.export_graphviz(clf,
+                                 #out_file='exports/diabete_tree1.pdf',
+                                 feature_names=features_names,
+                                 class_names=classes,
+                                 filled=True, rounded=True,
+                                 special_characters=True
+                                 )
+graph = graphviz.Source(dot_data)
+graph.render("exports/small_classification_tree_diabete_remission")
+
+# ============================
 # Random Forest
 # ============================
 
@@ -46,6 +69,8 @@ clf = clf.fit(data_diabete, classes_diabete.values[:, 0])
 
 df = pd.DataFrame([clf.feature_importances_], columns=features_names)
 df.name = "feature importances"
+
+print(df)
 df.to_csv("exports/random_forest_feature_importance.csv", sep=';')
 
 

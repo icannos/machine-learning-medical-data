@@ -26,18 +26,24 @@ plt.title("Two informative features, one cluster per class", fontsize='small')
 X1, Y1 = make_classification(n_samples=200, n_features=2, n_redundant=0, n_informative=2,
                              n_clusters_per_class=1)
 plt.scatter(X1[:, 0], X1[:, 1], marker='o', c=Y1, s=25, edgecolor='k')
+plt.savefig("exports/twoinformativedataset.png")
+plt.clf()
 
 # Second simulated data set
 plt.title("Three blobs", fontsize='small')
 X2, Y2 = make_blobs(n_samples=200, n_features=2, centers=3)
 plt.scatter(X2[:, 0], X2[:, 1], marker='o', c=Y2, s=25, edgecolor='k')
+plt.savefig("exports/trhee_blobs.png")
+plt.clf()
 
 # Third simulated data set
 plt.title("Non-linearly separated data sets", fontsize='small')
 X3, Y3 = make_moons(n_samples=200, shuffle=True, noise=None, random_state=None)
 plt.scatter(X3[:, 0], X3[:, 1], marker='o', c=Y3, s=25, edgecolor='k')
+plt.savefig("exports/nonlin_dataset.png")
+plt.clf()
 
-plt.savefig("exports/simulated_datasets.png")
+
 
 # =========================
 # Breast Cancer
@@ -108,31 +114,48 @@ output_str = ""
 # On étudie chacun des datasets
 for i, (X, Y, k) in enumerate(zip(datasets_X, datasets_Y, number_clusters)):
     print(f'{distrib_names[i]}')
+    plt.subplots_adjust(hspace=0.6)
+    plt.figure(1, figsize=(50,50), dpi=100)
+    plt.title(f"{distrib_names[i]}")
     # =========================
     # Clustering for each dataset
     # =========================
+
+    plt.subplot(3, 2, 1)
+
+    plt.scatter(X[:, 0], X[:, 1], s=10, c=Y)
+    plt.title("True labels")
 
     # Kmeans
     km = KMeans(n_clusters=k, init='k-means++', max_iter=100, n_init=1)
     km.fit(X)
 
+    plt.subplot(3, 2, 2)
     plt.scatter(X[:, 0], X[:, 1], s=10, c=km.labels_)
-    plt.savefig(f"exports/{distrib_names[i]} kmean.png")
+    plt.title(f"Kmean")
 
     # Hiearachical Clustering
 
     m_hclustring = {}
+    t = 1
     for linkage in ('ward', 'average', 'complete'):
+        plt.subplot(3, 2, 2+t)
+        t+=1
         clustering = AgglomerativeClustering(linkage=linkage, n_clusters=k)
         clustering.fit(X)
-        plt.savefig(f"exports/{distrib_names[i]} hclustering-{linkage}.png")
+        plt.scatter(X[:, 0], X[:, 1], s=10, c=clustering.labels_)
+        plt.title(f"Hclustering {linkage}")
         m_hclustring[linkage] = computes_metrics(metrics_fn, X, Y, clustering.labels_)
 
     # Spectral clustering
-
+    plt.subplot(3, 2, 6)
     spectral = cluster.SpectralClustering(n_clusters=k, eigen_solver='arpack', affinity="nearest_neighbors")
     spectral.fit(X)
-    plt.savefig(f"exports/{distrib_names[i]} spectral.png")
+    plt.scatter(X[:, 0], X[:, 1], s=10, c=spectral.labels_)
+    plt.title(f"Spectral")
+
+    plt.savefig(f'exports/{distrib_names[i]}-clustering.png')
+    plt.clf()
 
     # =========================
     # Metrics for each dataset
