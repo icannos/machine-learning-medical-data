@@ -1,0 +1,10 @@
+## TP 3
+
+### Best bics and optimal number of component for each data set:
+```
+Two informative features, one cluster per class -- lowest_bic=812.4087134629405, best_n_component=2
+Three blobs -- lowest_bic=1624.24700733203, best_n_component=3
+Non-linearly separated data sets -- lowest_bic=507.5767378886685, best_n_component=4
+Mice Protein Expression -- lowest_bic=-282144.24355174904, best_n_component=4
+Breast Cancer -- lowest_bic=-38148.47774325236, best_n_component=2
+```

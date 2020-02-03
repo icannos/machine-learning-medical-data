@@ -3,48 +3,7 @@ import random
 from scipy.stats import multivariate_normal, norm
 
 
-def pr_single_comp(mu, sigma, x):
-    if len(sigma.shape[1:]) == 2:
-        return None
-        return multivariate_normal(mean=mu, cov=sigma).pdf(x)
-    else:
-        proba = []
-
-        for i in range(sigma.shape[0]):
-            proba.append(np.transpose(norm(loc=mu[i], scale=sigma[i]).pdf(x)))
-
-        proba = np.array(proba)
-        return np.transpose(proba)
-
-def pr_single_normalized(mu, sigma, x):
-    unnorm_prob = pr_single_comp(mu, sigma, x)
-    normalization = np.sum(unnorm_prob, axis=1)
-
-    return unnorm_prob / normalization.reshape((-1, 1))
-
-
-def update_mu(x, mu, sigma):
-    prob = pr_single_normalized(mu, sigma, x)
-    print(prob.shape)
-    print(x.shape)
-    hat_mu = np.zeros(mu.shape)
-    for i in range(0, prob.shape[1]):
-        hat_mu  += prob[:,i] * x
-    hat_mu = hat_mu / np.sum(pr_single_normalized(mu, sigma, x), axis=1).reshape((-1, 1))
-    return hat_mu
-
-
-def update_sigma(x, mu, sigma):
-    prob = pr_single_normalized(mu, sigma, x)
-
-    hat_sigma = np.zeros(sigma.shape)
-    for i in range(0, prob.shape[1]):
-        hat_sigma += prob[:, i] * (x - mu) ** 2
-    hat_sigma = hat_sigma / np.sum(pr_single_normalized(mu, sigma, x), axis=1).reshape((-1, 1))
-    return hat_sigma
-
-
-class singleDimEM:
+class myEM:
     def __init__(self, n_components=1, dim=1):
         self.dim = dim
         self.n_components = n_components
@@ -54,26 +13,21 @@ class singleDimEM:
         self.reset()
 
     def reset(self):
-        self.mu = np.random.uniform(-5, 5, size =(self.n_components, self.dim))
+        self.sigma = np.random.uniform(-1, 1, size=(self.n_components, self.dim, self.dim))
+        for i in range(self.n_components):
+            self.sigma[i] = np.matmul(self.sigma[i], np.transpose(self.sigma[i]))
 
-        if self.dim > 1:
-            self.sigma = np.random.uniform(0, 1, size =(self.n_components, self.dim, self.dim))
-        else:
-            self.sigma = np.random.uniform(0, 1, size=(self.n_components, self.dim))
+        self.mu = np.random.uniform(-3, 3, size=(self.n_components, self.dim))
 
-
-    def fit(self, data, nb_iteration = 10):
+    def fit(self, data, nb_iteration=100):
         # Learning procedure (optimization)
 
         for iter in range(1, nb_iteration):
-            hat_mu = update_mu(data, self.mu, self.sigma)
-            hat_sigma = update_sigma(data, self.mu, self.sigma)
-            print('iter', iter)
-            print("updated mu = ", hat_mu)
-            print("updated sigma = ", hat_sigma)
+            hat_mu = self.update_mu(data)
+            hat_sigma = self.update_sigma(data)
+
             self.mu = hat_mu
             self.sigma = hat_sigma + 1e-13
-
     def fit_predict(self, X):
         self.fit(X)
         return self.predict(X)
@@ -82,5 +36,55 @@ class singleDimEM:
         return np.argmax(self.predict_proba(X), axis=1)
 
     def predict_proba(self, X):
-           return np.array([multivariate_normal(mean=self.mu[i], cov = self.sigma[i]).pdf(X)
-                            for i in range(self.n_components)])
+        y = []
+        for i in range(X.shape[0]):
+            y.append([multivariate_normal(mean=self.mu[j], cov=self.sigma[j]).pdf(X[i])
+                      for j in range(self.n_components)])
+
+        return np.array(y)
+
+    def update_mu(self, X):
+        pnk = self.proba_nk(X)
+
+        mu = np.zeros((self.n_components, *X.shape[1:]))
+
+        for k in range(self.n_components):
+            mu[k] = np.sum(pnk[:, k].reshape(-1,1)*X, axis=0) / (np.sum(pnk[:, k]).reshape(-1,1)+1E-10)
+
+        return mu
+
+    def update_sigma(self, X):
+        sigma = np.zeros((self.n_components, self.dim, self.dim))
+        pnk = self.proba_nk(X)
+
+        for k in range(self.n_components):
+            sigma[k] = np.cov(np.transpose(X), aweights=pnk[:, k]+1E-10)
+
+        return sigma
+
+    def proba_x(self, X):
+        probs = self.predict_proba(X)
+        probk = self.proba_k(X)
+
+        p = np.zeros(X.shape[0])
+
+        for k in range(self.n_components):
+            p += probs[:, k] * probk[k]
+
+        return p
+
+    def proba_nk(self, X):
+        px = self.proba_x(X)
+        pk = self.proba_k(X)
+        p = self.predict_proba(X)
+
+        p = p * pk
+        pnk =  p / px.reshape((-1,1))
+
+        return pnk
+
+    def proba_k(self, X):
+        probs = self.predict_proba(X)
+        normalization = np.sum(probs, axis=0)
+
+        return normalization / np.sum(normalization)

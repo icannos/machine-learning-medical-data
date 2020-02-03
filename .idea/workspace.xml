@@ -2,45 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0f472ac7-b8f1-4109-bd20-af710c3fec61" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tp2/readme.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tp3/Readme" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tp3/algorithm_singledim_em.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tp3/data/Data_Cortex_Nuclear.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tp3/data/wdbc.data" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tp1/diabete.py" beforeDir="false" afterPath="$PROJECT_DIR$/tp1/diabete.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tp1/exports/classification_tree_diabete_remission.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/tp1/exports/classification_tree_diabete_remission.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tp1/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/tp1/readme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tp2/clustering_methods.py" beforeDir="false" afterPath="$PROJECT_DIR$/tp2/clustering_methods.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tp2/exports/Breast Cancer hclustering-average.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tp2/exports/Breast Cancer hclustering-complete.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tp2/exports/Breast Cancer hclustering-ward.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tp2/exports/Breast Cancer kmean.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tp2/exports/Breast Cancer spectral.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tp2/exports/Breast Cancer-scores.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tp2/exports/Metrics-scores.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tp2/exports/Mice Protein Expression hclustering-average.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tp2/exports/Mice Protein Expression hclustering-complete.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tp2/exports/Mice Protein Expression hclustering-ward.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tp2/exports/Mice Protein Expression kmean.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tp2/exports/Mice Protein Expression spectral.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tp2/exports/Mice Protein Expression-scores.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tp2/exports/Non-linearly separated data sets hclustering-average.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tp2/exports/Non-linearly separated data sets hclustering-complete.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tp2/exports/Non-linearly separated data sets hclustering-ward.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tp2/exports/Non-linearly separated data sets kmean.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tp2/exports/Non-linearly separated data sets spectral.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tp2/exports/Non-linearly separated data sets-scores.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tp2/exports/Three blobs hclustering-average.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tp2/exports/Three blobs hclustering-complete.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tp2/exports/Three blobs hclustering-ward.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tp2/exports/Three blobs kmean.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tp2/exports/Three blobs spectral.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tp2/exports/Three blobs-scores.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tp2/exports/Two informative features, one cluster per class hclustering-average.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tp2/exports/Two informative features, one cluster per class hclustering-complete.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tp2/exports/Two informative features, one cluster per class hclustering-ward.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tp2/exports/Two informative features, one cluster per class kmean.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tp2/exports/Two informative features, one cluster per class spectral.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tp2/exports/Two informative features, one cluster per class-scores.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tp2/exports/simulated_datasets.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp3/algorithm_em.py" beforeDir="false" afterPath="$PROJECT_DIR$/tp3/algorithm_em.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp3/gaussian_mixture_models.py" beforeDir="false" afterPath="$PROJECT_DIR$/tp3/gaussian_mixture_models.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,20 +35,22 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/tp2/data" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/tp3/data" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/tp3" />
+      <recent name="$PROJECT_DIR$/tp6/data" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/tp3/data" />
       <recent name="$PROJECT_DIR$/tp2/data" />
       <recent name="$PROJECT_DIR$/tp6" />
       <recent name="$PROJECT_DIR$/tp5" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/tp6/data" />
-    </key>
   </component>
-  <component name="RunManager" selected="Python.clustering_methods">
-    <configuration name="classification" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.gaussian_mixture_models">
+    <configuration name="algorithm_em" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="medical" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -88,12 +58,34 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tp5" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tp3" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tp5/classification.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tp3/algorithm_em.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="algorithm_singledim_em" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="medical" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tp3" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tp3/algorithm_singledim_em.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -146,7 +138,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="logistic_regression" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="gaussian_mixture_models" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="medical" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -154,34 +146,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tp5" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tp3" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tp5/logistic_regression.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="pca" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="medical" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tp6" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tp6/pca.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tp3/gaussian_mixture_models.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -192,11 +162,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.gaussian_mixture_models" />
+        <item itemvalue="Python.algorithm_em" />
+        <item itemvalue="Python.algorithm_singledim_em" />
         <item itemvalue="Python.clustering_methods" />
         <item itemvalue="Python.diabete" />
-        <item itemvalue="Python.pca" />
-        <item itemvalue="Python.classification" />
-        <item itemvalue="Python.logistic_regression" />
       </list>
     </recent_temporary>
   </component>
@@ -229,6 +199,10 @@
       <workItem from="1579347195891" duration="7226000" />
       <workItem from="1579369468695" duration="10170000" />
       <workItem from="1579607182628" duration="1718000" />
+      <workItem from="1579609807757" duration="640000" />
+      <workItem from="1580462373847" duration="7465000" />
+      <workItem from="1580561417127" duration="1842000" />
+      <workItem from="1580565849741" duration="21815000" />
     </task>
     <servers />
   </component>
@@ -236,38 +210,42 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="687" y="286" width="525" height="383" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1579607909018">
+    <state x="686" y="264" width="525" height="383" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1580669348451">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="687" y="286" width="525" height="383" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1579607909018" />
-    <state width="1874" height="289" key="GridCell.Tab.0.bottom" timestamp="1579608811800">
+    <state x="686" y="264" width="525" height="383" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1580669348451" />
+    <state x="742" y="253" width="426" height="477" key="FileChooserDialogImpl" timestamp="1579610969269">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="289" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1579608811800" />
-    <state width="1874" height="289" key="GridCell.Tab.0.center" timestamp="1579608811799">
+    <state x="742" y="253" width="426" height="477" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1579610969269" />
+    <state width="1874" height="327" key="GridCell.Tab.0.bottom" timestamp="1580677264743">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="289" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1579608811799" />
-    <state width="1874" height="289" key="GridCell.Tab.0.left" timestamp="1579608811799">
+    <state width="1874" height="327" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1580677264743" />
+    <state width="1874" height="327" key="GridCell.Tab.0.center" timestamp="1580677264742">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="289" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1579608811799" />
-    <state width="1874" height="289" key="GridCell.Tab.0.right" timestamp="1579608811799">
+    <state width="1874" height="327" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1580677264742" />
+    <state width="1874" height="327" key="GridCell.Tab.0.left" timestamp="1580677264741">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="289" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1579608811799" />
+    <state width="1874" height="327" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1580677264741" />
+    <state width="1874" height="327" key="GridCell.Tab.0.right" timestamp="1580677264743">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1874" height="327" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1580677264743" />
     <state x="612" y="124" width="685" height="757" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1579270693672">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="612" y="124" width="685" height="757" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1579270693672" />
-    <state x="623" y="233" width="672" height="678" key="search.everywhere.popup" timestamp="1579422390430">
+    <state x="623" y="233" width="672" height="678" key="search.everywhere.popup" timestamp="1580576745876">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="623" y="233" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1579422390430" />
+    <state x="623" y="233" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1580576745876" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/medical$algorithm_em.coverage" NAME="algorithm_em Coverage Results" MODIFIED="1579276508594" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tp3" />
-    <SUITE FILE_PATH="coverage/medical$gaussian_mixture_models.coverage" NAME="gaussian_mixture_models Coverage Results" MODIFIED="1579276524901" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tp3" />
+    <SUITE FILE_PATH="coverage/medical$algorithm_em.coverage" NAME="algorithm_em Coverage Results" MODIFIED="1580669281844" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tp3" />
+    <SUITE FILE_PATH="coverage/medical$gaussian_mixture_models.coverage" NAME="gaussian_mixture_models Coverage Results" MODIFIED="1580669301030" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tp3" />
     <SUITE FILE_PATH="coverage/medical$Python_Console.coverage" NAME="Python Console Coverage Results" MODIFIED="1579270743886" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/medical$feature_selection.coverage" NAME="feature_selection Coverage Results" MODIFIED="1579345096319" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tp4" />
     <SUITE FILE_PATH="coverage/medical$classification.coverage" NAME="classification Coverage Results" MODIFIED="1579358344142" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tp5" />
