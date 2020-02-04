@@ -1,5 +1,13 @@
 ## TP 3
 
+### Structure
+
+```
+algorithm_em.py contains my own EM algorithm for multidimensional data
+algorithm_singledim_em.py is the code provided in the TP wrapped in a class to meet the sklearn API
+gaussian_mixture_models.py contains all the code for this TP.
+```
+
 ### Best bics and optimal number of component for each data set:
 ```
 Two informative features, one cluster per class -- lowest_bic=812.4087134629405, best_n_component=2
@@ -8,3 +16,11 @@ Non-linearly separated data sets -- lowest_bic=507.5767378886685, best_n_compone
 Mice Protein Expression -- lowest_bic=-282144.24355174904, best_n_component=4
 Breast Cancer -- lowest_bic=-38148.47774325236, best_n_component=2
 ```
+
+### Exports
+
+In the exports directory you will find the plots of the data and the clusters find by my own home made EM algorithm and the ones find by the EM algorithm from sklearn.
+
+### Comments
+
+EM algorithm performed correctly when the clusters are convex/connex that is because of the gaussian mixture assumption.

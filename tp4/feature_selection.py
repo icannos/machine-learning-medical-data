@@ -57,12 +57,11 @@ for X, Y, name in zip(X_datasets, Y_datasets, datasets_names):
 
     # Linear Lasso
     # Attention ici le sujet donne un algo de régression linéaire pas de régression logistique !
-    alphas = np.linspace(0, 1, 1000)
+    alphas = np.linspace(0.01, 1, 1000)
     scores = []
     features_number = []
     for alpha in alphas:
-
-        clf = linear_model.LogisticRegression(penalty='l1', C=alpha)
+        clf = linear_model.LogisticRegression(penalty='l1', C=alpha, solver='liblinear')
         clf.fit(X, Y)
 
         scores.append(clf.score(X,Y))
@@ -73,7 +72,7 @@ for X, Y, name in zip(X_datasets, Y_datasets, datasets_names):
     plt.subplot(2, 3, 1)
     plt.plot(alphas, scores)
     plt.title(f"{name}: Logistic Regression")
-    plt.ylabel("R2 Scores")
+    plt.ylabel("Accuracy")
     #plt.xlabel("Penalty coefficient: alpha")
 
     plt.subplot(2, 3, 4)
@@ -102,7 +101,7 @@ for X, Y, name in zip(X_datasets, Y_datasets, datasets_names):
     plt.subplot(2, 3, 2)
     plt.title(f"{name}: Linear SVC")
     plt.plot(alphas, scores)
-    plt.ylabel("R2 Scores")
+    plt.ylabel("Accuracy")
     #plt.xlabel("Penalty coeficient")
 
     plt.subplot(2, 3, 5)
@@ -130,7 +129,7 @@ for X, Y, name in zip(X_datasets, Y_datasets, datasets_names):
     plt.subplot(2, 3, 3)
     plt.title(f"{name}: ElasticNet")
     plt.plot(alphas, scores)
-    plt.ylabel("R2 Scores")
+    plt.ylabel("Accuracy")
     #plt.xlabel("Penalty coeficient: alpha")
 
     plt.subplot(2, 3, 6)
