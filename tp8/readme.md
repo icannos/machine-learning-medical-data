@@ -1,0 +1,16 @@
+## TP - 8
+
+All the code is in `deeplearning.py`
+
+All the results are stored in the csv file `exports/results_full.csv`.
+
+Results for the Micr Obes dataset are stored in `exports/results_splex.csv` and are reproduced below.
+
+|             | test_accuracy      | keras_testacc | keras_testloss     | keras_crossval | sklean_crossval     | 
+|-------------|--------------------|---------------|--------------------|----------------|---------------------| 
+| splex_host  | 0.6666666666666666 | 0.6           | 4.3069024085998535 | 0.435          | 0.43499999999999994 | 
+| splex_micro | 0.5333333333333333 | 0.4           | 7.686776638031006  | 0.67           | 0.6950000000000001  | 
+| splex_env   | 0.4                | 0.6           | 5.455205917358398  | 0.35500002     | 0.47000000000000003 | 
+| splex_full  | 0.5333333333333333 | 0.26666668    | 15.538191795349121 | 0.42           | 0.515               | 
+
+It is clear that the most useful dataset is the Micro gut data. Both with keras and mlptoolkit. 
